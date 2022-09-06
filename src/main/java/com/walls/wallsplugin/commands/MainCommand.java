@@ -11,7 +11,7 @@ import org.checkerframework.checker.units.qual.C;
 
 import java.util.Arrays;
 
-public class MainCommand implements CommandExecutor {
+public class MainCommand implements CommandExecutor{
     @Override
     public boolean onCommand (CommandSender sender, Command command, String label, String[] args) {
         if (args.length == 0) {
@@ -32,13 +32,13 @@ public class MainCommand implements CommandExecutor {
                     return false;
                 }
                 sender.sendMessage(ChatColor.GOLD+ "-------------The Walls-------------");
-                sender.sendMessage(ChatColor.AQUA + "/thewalls status [arena_name]-----" + ChatColor.WHITE + "Check arena status");
-                sender.sendMessage(ChatColor.AQUA + "/thewalls join [arena_name]-------" + ChatColor.WHITE + "Join a game");
-                sender.sendMessage(ChatColor.AQUA + "/thewalls leave------------------" + ChatColor.WHITE + "Leave current game");
-                sender.sendMessage(ChatColor.AQUA + "/thewalls list--------------------" + ChatColor.WHITE + "List all arena");
-                sender.sendMessage(ChatColor.AQUA + "/thewalls create-----------------" + ChatColor.WHITE + "Create arena");
-                sender.sendMessage(ChatColor.AQUA + "/thewalls delete [arena_name]-----" + ChatColor.WHITE + "Create arena");
-                sender.sendMessage(ChatColor.AQUA + "/thewalls abort [arena_name]------" + ChatColor.WHITE + "Force stop a game");
+                sender.sendMessage(ChatColor.AQUA + "/thewalls status [arena_name]" + ChatColor.WHITE + "-----Check arena status");
+                sender.sendMessage(ChatColor.AQUA + "/thewalls join [arena_name]" + ChatColor.WHITE + "-------Join a game");
+                sender.sendMessage(ChatColor.AQUA + "/thewalls leave" + ChatColor.WHITE + "------------------Leave current game");
+                sender.sendMessage(ChatColor.AQUA + "/thewalls list" + ChatColor.WHITE + "--------------------List all arena");
+                sender.sendMessage(ChatColor.AQUA + "/thewalls create" + ChatColor.WHITE + "-----------------Create arena");
+                sender.sendMessage(ChatColor.AQUA + "/thewalls delete [arena_name]" + ChatColor.WHITE + "----Delete arena");
+                sender.sendMessage(ChatColor.AQUA + "/thewalls abort [arena_name]" + ChatColor.WHITE + "------Force stop a game");
                 return true;
             case "status" :
                 break;
