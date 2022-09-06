@@ -4,5 +4,35 @@ main: com.walls.wallsplugin.Wallsplugin
 api-version: 1.19
 prefix: The Walls
 depend: [ Vault ]
-authors: [ harrynhj ]
-description: A classic minigame for Minecraft 
+authors: [ Cooky_qi_e ]
+description: A classic minigame for Minecraft
+
+commands:
+  thewalls:
+    description: The Walls plugin help
+
+permissions:
+  thewalls.help:
+    description: Main commands
+    default: true
+  thewalls.status:
+    description: Check arena status
+    default: true
+  thewalls.join:
+    description: Join a game
+    default: true
+  thewalls.leave:
+    description: Leave a game
+    default: true
+  thewalls.list:
+    description: List all arena
+    default: true
+  thewalls.create:
+    description: Create arena
+    default: op
+  thewalls.delete:
+    description: Delete arena
+    default: op
+  thewalls.abort:
+    description: Stop a game
+    default: op
