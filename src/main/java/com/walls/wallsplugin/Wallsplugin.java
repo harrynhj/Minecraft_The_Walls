@@ -10,6 +10,7 @@ public final class Wallsplugin extends JavaPlugin {
         // Plugin startup logic
         System.out.println("[The Walls] Plugin Enabled");
         getCommand("thewalls").setExecutor(new MainCommand());
+        System.out.println("111");
 
     }
 
