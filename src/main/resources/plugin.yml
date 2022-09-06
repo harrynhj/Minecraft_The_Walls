@@ -1,0 +1,8 @@
+name: Wallsplugin
+version: '${project.version}'
+main: com.walls.wallsplugin.Wallsplugin
+api-version: 1.19
+prefix: The Walls
+depend: [ Vault ]
+authors: [ harrynhj ]
+description: A classic minigame for Minecraft 
