@@ -11,6 +11,7 @@ public final class Wallsplugin extends JavaPlugin {
         // Plugin startup logic
         System.out.println("[The Walls] Plugin Enabled");
         getCommand("thewalls").setExecutor(new MainCommand());
+        getCommand("thewalls").setTabCompleter(new MainCommand());
         getServer().getPluginManager().registerEvents(new Move(), this);
     }
     @Override

@@ -5,13 +5,16 @@ import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
+import org.bukkit.command.TabExecutor;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.checkerframework.checker.units.qual.C;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
-public class MainCommand implements CommandExecutor{
+public class MainCommand implements CommandExecutor, TabExecutor {
     @Override
     public boolean onCommand (CommandSender sender, Command command, String label, String[] args) {
         if (args.length == 0) {
@@ -48,8 +51,6 @@ public class MainCommand implements CommandExecutor{
                 break;
             case "list" :
                 break;
-            case "adminhelp" :
-                break;
             case "create" :
                 break;
             case "delete" :
@@ -62,5 +63,22 @@ public class MainCommand implements CommandExecutor{
         }
         return false;
 
+    }
+
+    @Override
+    public List<String> onTabComplete(CommandSender commandSender, Command command, String s, String[] strings) {
+        if (strings.length == 1) {
+            List<String> temp = new ArrayList<>();
+            temp.add("help");
+            temp.add("status");
+            temp.add("join");
+            temp.add("leave");
+            temp.add("list");
+            temp.add("create");
+            temp.add("delete");
+            temp.add("abort");
+            return temp;
+        }
+        return null;
     }
 }
