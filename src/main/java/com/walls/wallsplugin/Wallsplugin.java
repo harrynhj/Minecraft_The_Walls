@@ -8,11 +8,13 @@ public final class Wallsplugin extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        // Plugin startup logic
-        System.out.println("[The Walls] Plugin Enabled");
+        // Generate config
+        saveDefaultConfig();
+        // Register commands
         getCommand("thewalls").setExecutor(new MainCommand());
         getCommand("thewalls").setTabCompleter(new MainCommand());
         getServer().getPluginManager().registerEvents(new Move(), this);
+        System.out.println("[The Walls] Plugin Enabled");
     }
     @Override
     public void onDisable() {
