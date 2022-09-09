@@ -20,12 +20,15 @@ public class Move implements Listener {
 
         Location loc = move.getPlayer().getLocation();
 
+        /*
         move.getPlayer().sendMessage(ChatColor.GREEN + "from: " + Math.round(from_x) + ", " + Math.round(from_y) + ", " + Math.round(from_z));
         move.getPlayer().sendMessage(ChatColor.GREEN + "to: " + Math.round(to_x) + ", " + Math.round(to_y) +  ", " + Math.round(to_z));
         if (to_y > 255) {
             move.getPlayer().teleport(loc);
             move.getPlayer().sendMessage(ChatColor.RED + "Too high");
         }
+        */
+
 
 }
 
